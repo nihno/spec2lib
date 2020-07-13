@@ -84,6 +84,9 @@ class main_gui_class:
             print('csv')
         if format == "txt":
             print('txt')
+        if format == "amap":
+            print('amap')
+            format = "apit"
         if format == "apit":
             try:
                 x,y,table_x,table_y = importApit.import_apit(file_path, calc_mean=False, KK_transform=False, cut=False, extend=True, mapping=True)
@@ -132,6 +135,8 @@ def save_spectra(root):
             print('csv')
         if format == "txt":
             print('txt')
+        if format =="amap":
+            format = "apit"
         if format == "apit":
             try:
                 x,y,table_x,table_y = importApit.import_apit(file_path, calc_mean=False, KK_transform=False, cut=False, extend=True, mapping=True)
@@ -140,7 +145,7 @@ def save_spectra(root):
             file_path = file_path[0:-4] + 'jdx'
         x_processed, y_processed, baseline = spec_process(x,y)
         spc.save_jcamp(x_processed,y_processed,x,y,file_path,processing)
-    print(values)
+    # print(values)
 
 
 """ Create Spectra List """
