@@ -21,6 +21,8 @@ from scipy.signal import savgol_filter
 import importApit
 import spec2lib_functions as spc
 
+print('Hello World')
+
 ## code
 
 """ CREATE MAIN GUI """
